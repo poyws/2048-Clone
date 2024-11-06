@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2048 Game Clone</title>
+    <base href="https://chatgpt-web-files.web.app/assets/">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1 class="game-title">2048</h1>
+        <div class="game-description">
+            Join the numbers and get to the <strong>2048 tile!</strong><br>
+            Use your arrow keys or swipe to move the tiles.
+        </div>
+
+        <div class="header">
+            <div class="scores">
+                <div class="score-box">
+                    <div class="score-label">SCORE</div>
+                    <div class="score-value" id="score">0</div>
+                </div>
+                <div class="score-box">
+                    <div class="score-label">BEST</div>
+                    <div class="score-value" id="highScore">0</div>
+                </div>
+            </div>
+            <button class="new-game-btn" onclick="resetGame()">New Game</button>
+        </div>
+
+        <div class="grid" id="grid"></div>
+
+        <div class="instructions">
+            <h2>How to Play</h2>
+            <ul>
+                <li>Use your arrow keys or swipe to move tiles</li>
+                <li>When two tiles with the same number touch, they merge into one!</li>
+                <li>Create a tile with the number 2048 to win</li>
+                <li>Plan your moves carefully to achieve the highest score</li>
+            </ul>
+        </div>
+
+        <div class="stats">
+            <div class="stat-box">
+                <h3>Games Played</h3>
+                <div id="gamesPlayed">0</div>
+            </div>
+            <div class="stat-box">
+                <h3>Time Played</h3>
+                <div id="timePlayed">0:00</div>
+            </div>
+            <div class="stat-box">
+                <h3>Highest Tile</h3>
+                <div id="highestTile">2</div>
+            </div>
+        </div>
+
+        <div class="achievements">
+            <div class="achievement">
+                <h4>Rookie</h4>
+                <p>Reach 512</p>
+            </div>
+            <div class="achievement locked">
+                <h4>Professional</h4>
+                <p>Reach 2048</p>
+            </div>
+            <div class="achievement locked">
+                <h4>Master</h4>
+                <p>Reach 4096</p>
+            </div>
+            <div class="achievement locked">
+                <h4>Legend</h4>
+                <p>Score 50,000</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Created with ❤️ | 2048 Game Clone</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
